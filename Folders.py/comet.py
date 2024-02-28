@@ -1,6 +1,7 @@
-import random
 import pygame
-from random import randint
+from monster import Mummy, Alien
+import random
+
 
 class Comet(pygame.sprite.Sprite):
 
@@ -21,8 +22,7 @@ class Comet(pygame.sprite.Sprite):
             print("l'evenement est finie")
             # remettre la bar a zero
             self.comet_event.reset_percent()
-            self.comet_event.game.spawn_monster()
-            self.comet_event.game.spawn_monster()
+            self.comet_event.game.start()
 
     def fall(self):
         self.rect.y += self.velocity
