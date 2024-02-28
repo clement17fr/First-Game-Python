@@ -37,12 +37,10 @@ class Player(animation.animate_sprite):
 
 
     def launch_projectile(self):
-        #creer une nouvelle instance de notre classe projectile
         self.all_projectile.add(Projectile(self))
         self.start_animation()
 
     def move_rigth(self):
-        #si le joueur n'est pas en collision avec avec un autre element
         if not self.game.check_collision(self, self.game.all_monster):
             self.rect.x += self.velocity
 
